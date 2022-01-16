@@ -1,0 +1,30 @@
+---
+- name: ACL for R1
+  hosts: R1
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: ACL set for R1
+      ios_command:
+        commands:
+          - config terminal
+          - access-list 179 permit tcp 192.168.77.0 0.0.0.255 192.168.77.3 0.0.0.0
+          - access-list 179 permit udp 192.168.77.0 0.0.0.255 192.168.77.3 0.0.0.255
+      register: acl
+
+    
+- name: ACL for R2
+  hosts: R2
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: ACL set for R2
+      ios_command:
+        commands:
+          - config terminal
+          - access-list 186 permit tcp 192.168.69.0 0.0.0.255 192.168.69.3 0.0.0.0
+          - access-list 186 permit udp 192.168.69.0 0.0.0.255 192.168.69.3 0.0.0.255
+      register: acl
+

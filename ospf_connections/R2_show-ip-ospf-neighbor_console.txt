@@ -1,0 +1,6 @@
++++ R2: executing command 'show ip ospf neighbor' +++
+show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.1.1       0   FULL/  -        00:00:31    10.0.0.1        Serial2/0
+R2#

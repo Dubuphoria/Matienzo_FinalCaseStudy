@@ -1,0 +1,6 @@
++++ R2: executing command 'show access-lists' +++
+show access-lists
+Extended IP access list 186
+    10 permit tcp 192.168.69.0 0.0.0.255 host 192.168.69.3
+    20 permit udp 192.168.69.0 0.0.0.255 192.168.69.0 0.0.0.255
+R2#

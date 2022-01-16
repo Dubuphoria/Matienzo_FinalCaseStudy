@@ -1,0 +1,67 @@
+{
+  "179": {
+    "aces": {
+      "10": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "host 192.168.77.3": {
+                  "destination_network": "host 192.168.77.3"
+                }
+              },
+              "protocol": "tcp",
+              "source_network": {
+                "192.168.77.0 0.0.0.255": {
+                  "source_network": "192.168.77.0 0.0.0.255"
+                }
+              }
+            }
+          },
+          "l4": {
+            "tcp": {
+              "established": false
+            }
+          }
+        },
+        "name": "10"
+      },
+      "20": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "192.168.77.0 0.0.0.255": {
+                  "destination_network": "192.168.77.0 0.0.0.255"
+                }
+              },
+              "protocol": "udp",
+              "source_network": {
+                "192.168.77.0 0.0.0.255": {
+                  "source_network": "192.168.77.0 0.0.0.255"
+                }
+              }
+            }
+          },
+          "l4": {
+            "udp": {
+              "established": false
+            }
+          }
+        },
+        "name": "20"
+      }
+    },
+    "name": "179",
+    "type": "ipv4-acl-type"
+  },
+  "_exclude": []
+}
